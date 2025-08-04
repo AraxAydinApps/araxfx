@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AraxFX - Sıkça Sorulan Sorular (SSS)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'navy': '#1e3a8a',
+                        'dark-navy': '#1e2a5a',
+                        'gold': '#fbbf24',
+                        'dark-gold': '#f59e0b'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e2a5a 0%, #1e3a8a 50%, #374151 100%);
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+        }
+        .faq-item {
+            transition: all 0.3s ease;
+        }
+        .faq-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .faq-content.active {
+            max-height: 500px;
+        }
+        .faq-arrow {
+            transition: transform 0.3s ease;
+        }
+        .faq-arrow.active {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Header -->
+    <header class="bg-navy py-4 px-6 shadow-xl border-b border-gold/20">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <div class="w-12 h-12 gold-gradient rounded-lg flex items-center justify-center shadow-lg">
+                    <span class="text-navy font-bold text-xl">A</span>
+                </div>
+                <div>
+                    <h1 class="text-3xl font-bold text-gold">AraxFX</h1>
+                    <p class="text-xs text-gray-300">Global Investment Company</p>
+                </div>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#" class="text-white hover:text-gold transition-colors font-medium">Ana Sayfa</a>
+                <a href="#genel" class="text-white hover:text-gold transition-colors font-medium">Genel</a>
+                <a href="#sistem" class="text-white hover:text-gold transition-colors font-medium">Sistem</a>
+                <a href="#yasal" class="text-white hover:text-gold transition-colors font-medium">Yasal</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg py-16 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-5xl font-bold mb-6">
+                <span class="text-gold">Sıkça Sorulan</span><br>
+                <span class="text-white">Sorular</span>
+            </h2>
+            <p class="text-xl text-gray-300 leading-relaxed">
+                AraxFX Trading sistemi hakkında merak ettiğiniz her şey. 
+                Profesyonel yatırım sürecimiz ve koşullarımız hakkında detaylı bilgiler.
+            </p>
+        </div>
+    </section>
+
+    <!-- Search Section -->
+    <section class="py-8 px-6 bg-gray-800">
+        <div class="max-w-4xl mx-auto">
+            <div class="relative">
+                <input type="text" id="searchInput" placeholder="Soru ara..." 
+                       class="w-full px-6 py-4 bg-gray-700 border border-gold/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-gold">
+                <div class="absolute right-4 top-1/2 transform -translate-y-1/2">
+                    <span class="text-gold text-xl">🔍</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Categories -->
+    <section class="py-12 px-6 bg-gray-900">
+        <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-4 mb-12">
+                <button class="category-btn active bg-gold text-navy px-6 py-3 rounded-lg font-bold hover:bg-dark-gold transition-all" data-category="all">
+                    Tümü
+                </button>
+                <button class="category-btn bg-gray-700 text-white px-6 py-3 rounded-lg font-bold hover:bg-gold hover:text-navy transition-all" data-category="genel">
+                    Genel Bilgiler
+                </button>
+                <button class="category-btn bg-gray-700 text-white px-6 py-3 rounded-lg font-bold hover:bg-gold hover:text-navy transition-all" data-category="sistem">
+                    Sistem & Süreç
+                </button>
+                <button class="category-btn bg-gray-700 text-white px-6 py-3 rounded-lg font-bold hover:bg-gold hover:text-navy transition-all" data-category="yasal">
+                    Yasal & Güvenlik
+                </button>
+            </div>
+
+            <!-- FAQ Items -->
+            <div class="space-y-4">
+                <!-- Genel Bilgiler -->
+
+                <div class="faq-item bg-gray-800 rounded-xl border border-gold/20 overflow-hidden" data-category="genel">
+                    <button class="faq-header w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-700/50 transition-all">
+                        <h3 class="text-xl font-bold text-gold">AraxFX nedir?</h3>
+                        <span class="faq-arrow text-gold text-2xl">▼</span>
+                    </button>
+                    <div class="faq-content px-8 pb-6">
+                        <p class="text-gray-300 leading-relaxed">
+                            AraxFX, kendi sermayesiyle işlem yapma fırsatı sunan profesyonel bir trading şirketidir. Amacımız, yetenekli trader'larla sermayemizi verimli şekilde değerlendirmektir.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-gray-800 rounded-xl border border-gold/20 overflow-hidden" data-category="genel">
+                    <button class="faq-header w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-700/50 transition-all">
+                        <h3 class="text-xl font-bold text-gold">Benim yatırım yapmam gerekiyor mu?</h3>
+                        <span class="faq-arrow text-gold text-2xl">▼</span>
+                    </button>
+                    <div class="faq-content px-8 pb-6">
+                        <p class="text-gray-300 leading-relaxed">
+                            <strong class="text-gold">Hayır.</strong> AraxFX modeli gereği sizin yatırım yapmanıza gerek yok. Sermaye tarafı tamamen bize aittir. AraxFX, tamamen kendi öz sermayesiyle çalışır ve yatırımcılardan para kabul etmez.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-gray-800 rounded-xl border border-gold/20 overflow-hidden" data-category="genel">
+                    <button class="faq-header w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-700/50 transition-all">
+                        <h3 class="text-xl font-bold text-gold">AraxFX yatırımcılardan fon toplar mı?</h3>
+                        <span class="faq-arrow text-gold text-2xl">▼</span>
+                    </button>
+                    <div class="faq-content px-8 pb-6">
+                        <p class="text-gray-300 leading-relaxed">
+                            <strong class="text-gold">Hayır.</strong> AraxFX, tamamen kendi öz sermayesiyle çalışır. Yatırımcılardan para kabul etmez. Trader'lara sermaye tahsis eder ve kâr ortaklığı modeliyle ilerler.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Sistem & Süreç -->
+                <div class="faq-item bg-gray-800 rounded-xl border border-gold/20 overflow-hidden" data-category="sistem">
+                    <button class="faq-header w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-700/50 transition-all">
+                        <h3 class="text-xl font-bold text-gold">Sisteme nasıl dahil olabilirim?</h3>
+                        <span class="faq-arrow text-gold text-2xl">▼</span>
+                    </button>
+                    <div class="faq-content px-8 pb-6">
+                        <p class="text-gray-300 leading-relaxed">
+                            İlk adım olarak TradeKriter üzerinden bir online sınava girmeniz gerekir. Bu sınav, temel işlem bilgilerinizi ve risk yönetimi disiplininizi test eder. Başarılı olursanız, AraxFX ekibine katılıp gerçek sermaye ile işlem yapma hakkı kazanırsınız.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-gray-800 rounded-xl border border-gold/20 overflow-hidden" data-category="sistem">
+                    <button class="faq-header w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-700/50 transition-all">
+                        <h3 class="text-xl font-bold text-gold">Sınavı geçtikten sonra ne oluyor?</h3>
+                        <span class="faq-arrow text-gold text-2xl">▼</span>
+                    </button>
+                    <div class="faq-content px-8 pb-6">
+                        <p class="text-gray-300 leading-relaxed">
+                            Sınavı geçen adaylara TradeKriter sertifikası verilir. Bu belge ile AraxFX'e başvuru yapabilir ve gerçek sermaye ile çalışmaya başlayabilirsiniz.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-gray-800 rounded-xl border border-gold/20 overflow-hidden" data-category="sistem">
+                    <button class="faq-header w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-700/50 transition-all">
+                        <h3 class="text-xl font-bold text-gold">Ne kadar sermaye veriliyor?</h3>
+                        <span class="faq-arrow text-gold text-2xl">▼</span>
+                    </button>
+                    <div class="faq-content px-8 pb-6">
+                        <p class="text-gray-300 leading-relaxed">
+                            Başlangıç sermayesi, performansa göre belirlenir. Genellikle <strong class="text-gold">$10.000 ile $200.000</strong> arası hesap tanımlanır. Bu hesaplardaki başarı oranınıza göre daha yüksek sermaye tahsis edilir.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-gray-800 rounded-xl border border-gold/20 overflow-hidden" data-category="sistem">
+                    <button class="faq-header w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-700/50 transition-all">
+                        <h3 class="text-xl font-bold text-gold">Hesap yapısı nasıldır?</h3>
+                        <span class="faq-arrow text-gold text-2xl">▼</span>
+                    </button>
+                    <div class="faq-content px-8 pb-6">
+                        <p class="text-gray-300 leading-relaxed">
+                            Sisteme kabul edilen trader'lara sanal bir işlem hesabı (demo) tanımlanır. Bu hesaplar, gerçek piyasa koşullarını birebir yansıtan veri akışıyla çalışır. Başarılı performans gösteren trader'lar, gerçek sermaye eşleştirmesi ile ilerler.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-gray-800 rounded-xl border border-gold/20 overflow-hidden" data-category="sistem">
+                    <button class="faq-header w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-700/50 transition-all">
+                        <h3 class="text-xl font-bold text-gold">Kazancım nasıl hesaplanır?</h3>
+                        <span class="faq-arrow text-gold text-2xl">▼</span>
+                    </button>
+                    <div class="faq-content px-8 pb-6">
+                        <p class="text-gray-300 leading-relaxed">
+                            Gerçekleşen net kar üzerinden genellikle <strong class="text-gold">%50'ye kadar</strong> pay alırsınız. Örneğin $1000 kâr ettiyseniz, bunun $500'ı sizin olur. Oranlar, plan türüne ve performansa göre değişiklik gösterebilir.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-gray-800 rounded-xl border border-gold/20 overflow-hidden" data-category="sistem">
+                    <button class="faq-header w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-700/50 transition-all">
+                        <h3 class="text-xl font-bold text-gold">Kazanç paylaşımı nasıl çalışır?</h3>
+                        <span class="faq-arrow text-gold text-2xl">▼</span>
+                    </button>
+                    <div class="faq-content px-8 pb-6">
+                        <p class="text-gray-300 leading-relaxed">
+                            Net kâr üzerinden %50'ye kadar trader payı sunulmaktadır. Oranlar, plan türüne ve performansa göre değişiklik gösterebilir. Kazançlar, belirli bir ödeme takvimi doğrultusunda banka hesabına veya kripto cüzdanına aktarılır.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-gray-800 rounded-xl border border-gold/20 overflow-hidden" data-category="sistem">
+                    <button class="faq-header w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-700/50 transition-all">
+                        <h3 class="text-xl font-bold text-gold">Risk yönetimi nasıl yapılır?</h3>
+                        <span class="faq-arrow text-gold text-2xl">▼</span>
+                    </button>
+                    <div class="faq-content px-8 pb-6">
+                        <p class="text-gray-300 leading-relaxed">
+                            Her hesap için günlük ve toplam zarar limitleri (daily & max drawdown) önceden tanımlanır. Bu sınırların ihlali durumunda hesap devre dışı bırakılır. Bu, hem sermaye koruması hem de disiplinli işlem alışkanlıkları açısından zorunludur.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-gray-800 rounded-xl border border-gold/20 overflow-hidden" data-category="sistem">
+                    <button class="faq-header w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-700/50 transition-all">
+                        <h3 class="text-xl font-bold text-gold">Zarar edersem ne olur?</h3>
+                        <span class="faq-arrow text-gold text-2xl">▼</span>
+                    </button>
+                    <div class="faq-content px-8 pb-6">
+                        <p class="text-gray-300 leading-relaxed">
+                            Sistemde belirlenen maksimum zarar limiti vardır. Bu limiti aşarsanız hesap devre dışı kalır ancak <strong class="text-gold">size hiçbir maddi yükümlülük yansıtılmaz.</strong> Kendi paranızla işlem yapmadığınız için borç da oluşmaz.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-gray-800 rounded-xl border border-gold/20 overflow-hidden" data-category="sistem">
+                    <button class="faq-header w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-700/50 transition-all">
+                        <h3 class="text-xl font-bold text-gold">Eğitim veriyor musunuz?</h3>
+                        <span class="faq-arrow text-gold text-2xl">▼</span>
+                    </button>
+                    <div class="faq-content px-8 pb-6">
+                        <p class="text-gray-300 leading-relaxed">
+                            Şimdilik eğitim vermiyoruz ancak test sistemimiz aynı zamanda sizi disiplinli işlem yapmaya teşvik eden bir öğrenme süreci içerir. İleride özel eğitim paketleri sunabiliriz.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Yasal & Güvenlik -->
+                <div class="faq-item bg-gray-800 rounded-xl border border-gold/20 overflow-hidden" data-category="yasal">
+                    <button class="faq-header w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-700/50 transition-all">
+                        <h3 class="text-xl font-bold text-gold">Bu sistem yasal mı?</h3>
+                        <span class="faq-arrow text-gold text-2xl">▼</span>
+                    </button>
+                    <div class="faq-content px-8 pb-6">
+                        <p class="text-gray-300 leading-relaxed">
+                            <strong class="text-gold">Evet.</strong> AraxFX modelli, Türkiye'de ve yurt dışında geçerli olan finansal değerlendirme ve sertifikasyon ilkelerine uygun olarak yapılandırılmıştır. Her işlem ve süreç kayıt altındadır.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-gray-800 rounded-xl border border-gold/20 overflow-hidden" data-category="yasal">
+                    <button class="faq-header w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-700/50 transition-all">
+                        <h3 class="text-xl font-bold text-gold">İstediğim zaman ayrılabilir miyim?</h3>
+                        <span class="faq-arrow text-gold text-2xl">▼</span>
+                    </button>
+                    <div class="faq-content px-8 pb-6">
+                        <p class="text-gray-300 leading-relaxed">
+                            <strong class="text-gold">Evet.</strong> AraxFX ile çalışmanız gönüllülük esasına dayanır. Dilerseniz işlemi durdurabilir ya da başka aşamalara geçebilirsiniz.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-gray-800 rounded-xl border border-gold/20 overflow-hidden" data-category="yasal">
+                    <button class="faq-header w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-700/50 transition-all">
+                        <h3 class="text-xl font-bold text-gold">Birden fazla hesap açabilir miyim?</h3>
+                        <span class="faq-arrow text-gold text-2xl">▼</span>
+                    </button>
+                    <div class="faq-content px-8 pb-6">
+                        <p class="text-gray-300 leading-relaxed">
+                            <strong class="text-gold">Hayır.</strong> Şeffaflık ve adil değerlendirme için her kullanıcı yalnızca bir sınav ve bir işlem hesabı ile sistemde yer alabilir.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-gray-800 rounded-xl border border-gold/20 overflow-hidden" data-category="sistem">
+                    <button class="faq-header w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-700/50 transition-all">
+                        <h3 class="text-xl font-bold text-gold">İşlem platformu nedir?</h3>
+                        <span class="faq-arrow text-gold text-2xl">▼</span>
+                    </button>
+                    <div class="faq-content px-8 pb-6">
+                        <p class="text-gray-300 leading-relaxed">
+                            AraxFX, <strong class="text-gold">MetaTrader 5 (MT5)</strong> altyapısı üzerinden işlem yapmanıza imkân tanır. Hesaplar gerçek zamanlı fiyat akışı ve tam analiz araçları içerir.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-gray-800 rounded-xl border border-gold/20 overflow-hidden" data-category="sistem">
+                    <button class="faq-header w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-700/50 transition-all">
+                        <h3 class="text-xl font-bold text-gold">İzin verilen enstrümanlar nelerdir?</h3>
+                        <span class="faq-arrow text-gold text-2xl">▼</span>
+                    </button>
+                    <div class="faq-content px-8 pb-6">
+                        <p class="text-gray-300 leading-relaxed">
+                            <strong class="text-gold">Forex</strong> (majör/minör pariteler), <strong class="text-gold">emtialar</strong>, <strong class="text-gold">endeksler</strong> ve bazı CFD ürünleri işleme açıktır. Kripto paralar belirli zaman dilimlerinde ve belirlenmiş kurallar çerçevesinde işleme açılabilir.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-gray-800 rounded-xl border border-gold/20 overflow-hidden" data-category="yasal">
+                    <button class="faq-header w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-700/50 transition-all">
+                        <h3 class="text-xl font-bold text-gold">Bir trader birden fazla hesap açabilir mi?</h3>
+                        <span class="faq-arrow text-gold text-2xl">▼</span>
+                    </button>
+                    <div class="faq-content px-8 pb-6">
+                        <p class="text-gray-300 leading-relaxed">
+                            <strong class="text-gold">Hayır.</strong> Her kullanıcı yalnızca tek bir sınav ve işlem hesabıyla sistemde yer alabilir. Çoklu hesap tespiti durumunda tüm erişimler iptal edilir.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-gray-800 rounded-xl border border-gold/20 overflow-hidden" data-category="sistem">
+                    <button class="faq-header w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-700/50 transition-all">
+                        <h3 class="text-xl font-bold text-gold">İşlem kısıtlamaları var mı?</h3>
+                        <span class="faq-arrow text-gold text-2xl">▼</span>
+                    </button>
+                    <div class="faq-content px-8 pb-6">
+                        <p class="text-gray-300 leading-relaxed">
+                            <strong class="text-gold">Evet.</strong> Sistem içi scalping, arbitrage veya algoritmik açık pozisyon taşıma gibi yöntemler belirli koşullarda yasaktır. Detaylı kurallar kullanıcı sözleşmesinde yer almaktadır.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-gray-800 rounded-xl border border-gold/20 overflow-hidden" data-category="yasal">
+                    <button class="faq-header w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-700/50 transition-all">
+                        <h3 class="text-xl font-bold text-gold">Vergilendirme nasıl yapılır?</h3>
+                        <span class="faq-arrow text-gold text-2xl">▼</span>
+                    </button>
+                    <div class="faq-content px-8 pb-6">
+                        <p class="text-gray-300 leading-relaxed">
+                            Kazançlar kişisel gelir olarak değerlendirildiği için <strong class="text-gold">vergi yükümlülüğü kullanıcıya aittir.</strong> AraxFX gerekli belgeleri talep halinde sağlayabilir, ancak vergi sorumluluğu bireysel düzeyde değerlendirilmelidir.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-gray-800 rounded-xl border border-gold/20 overflow-hidden" data-category="yasal">
+                    <button class="faq-header w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-700/50 transition-all">
+                        <h3 class="text-xl font-bold text-gold">AraxFX yasal olarak nerede kayıtlıdır?</h3>
+                        <span class="faq-arrow text-gold text-2xl">▼</span>
+                    </button>
+                    <div class="faq-content px-8 pb-6">
+                        <p class="text-gray-300 leading-relaxed">
+                            AraxFX, uluslararası finans merkezlerinde yasal olarak kayıtlıdır. İlgili tüm faaliyetler yasal düzenlemelere uygun şekilde yapılandırılmıştır. <strong class="text-gold">Türkiye'deki faaliyetler, danışmanlık ve değerlendirme hizmeti şeklindedir.</strong>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-gray-800 rounded-xl border border-gold/20 overflow-hidden" data-category="yasal">
+                    <button class="faq-header w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-700/50 transition-all">
+                        <h3 class="text-xl font-bold text-gold">İşlem stratejim gizli mi kalır?</h3>
+                        <span class="faq-arrow text-gold text-2xl">▼</span>
+                    </button>
+                    <div class="faq-content px-8 pb-6">
+                        <p class="text-gray-300 leading-relaxed">
+                            <strong class="text-gold">Evet.</strong> Tüm işlem verileri gizlilik sözleşmesi kapsamında korunmaktadır. AraxFX hiçbir koşulda trader'ın stratejisini üçüncü taraflarla paylaşmaz.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item bg-gray-800 rounded-xl border border-gold/20 overflow-hidden" data-category="genel">
+                    <button class="faq-header w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-700/50 transition-all">
+                        <h3 class="text-xl font-bold text-gold">AraxFX ile çalışmaya devam etmek zorunlu mu?</h3>
+                        <span class="faq-arrow text-gold text-2xl">▼</span>
+                    </button>
+                    <div class="faq-content px-8 pb-6">
+                        <p class="text-gray-300 leading-relaxed">
+                            <strong class="text-gold">Hayır.</strong> İşbirliği gönüllülük esasına dayanır. Performansın olumlu olması koşuluyla uzun vadeli çalışmak mümkündür, ancak trader dilediği zaman sistemden ayrılabilir.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="py-16 px-6 gradient-bg">
+        <div class="max-w-4xl mx-auto text-center">
+            <h3 class="text-4xl font-bold mb-6">
+                Sorunuz <span class="text-gold">Cevaplanmadı mı?</span>
+            </h3>
+            <p class="text-xl text-gray-300 mb-8">
+                Uzman ekibimiz size yardımcı olmaya hazır. 7/24 destek hattımızdan bize ulaşabilirsiniz.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="gold-gradient text-navy px-8 py-4 rounded-lg font-bold text-lg hover:scale-105 transform transition-all shadow-lg">
+                    📞 Canlı Destek
+                </button>
+                <button class="border-2 border-gold text-gold px-8 py-4 rounded-lg font-bold text-lg hover:bg-gold hover:text-navy transition-all">
+                    📧 E-posta Gönder
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 py-12 px-6 border-t border-gold/20">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div class="w-12 h-12 gold-gradient rounded-lg flex items-center justify-center">
+                            <span class="text-navy font-bold text-xl">A</span>
+                        </div>
+                        <div>
+                            <h1 class="text-2xl font-bold text-gold">AraxFX</h1>
+                            <p class="text-xs text-gray-400">Global Investment Company</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-4 leading-relaxed">
+                        Profesyonel trading çözümleri ile yetenekli trader'ları destekliyoruz.
+                    </p>
+                </div>
+                
+                <div>
+                    <h5 class="font-bold text-gold mb-4">Hızlı Linkler</h5>
+                    <div class="space-y-2">
+                        <a href="#" class="block text-gray-400 hover:text-gold transition-colors">Ana Sayfa</a>
+                        <a href="#" class="block text-gray-400 hover:text-gold transition-colors">Hakkımızda</a>
+                        <a href="#" class="block text-gray-400 hover:text-gold transition-colors">Trading</a>
+                        <a href="#" class="block text-gray-400 hover:text-gold transition-colors">İletişim</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h5 class="font-bold text-gold mb-4">Destek</h5>
+                    <div class="space-y-2">
+                        <a href="#" class="block text-gray-400 hover:text-gold transition-colors">SSS</a>
+                        <a href="#" class="block text-gray-400 hover:text-gold transition-colors">Canlı Destek</a>
+                        <a href="#" class="block text-gray-400 hover:text-gold transition-colors">Eğitim Merkezi</a>
+                        <a href="#" class="block text-gray-400 hover:text-gold transition-colors">Yardım Dökümanları</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h5 class="font-bold text-gold mb-4">İletişim</h5>
+                    <div class="space-y-3 text-gray-400">
+                        <div class="flex items-center space-x-2">
+                            <span>📧</span>
+                            <span>destek@araxfx.com</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span>📞</span>
+                            <span>+90 212 555 0123</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span>💬</span>
+                            <span>7/24 Canlı Destek</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400 text-sm">
+                    © 2024 AraxFX Global Investment Company. Tüm hakları saklıdır.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle Functionality
+        document.querySelectorAll('.faq-header').forEach(header => {
+            header.addEventListener('click', function() {
+                const content = this.nextElementSibling;
+                const arrow = this.querySelector('.faq-arrow');
+                const isActive = content.classList.contains('active');
+                
+                // Close all other FAQ items
+                document.querySelectorAll('.faq-content').forEach(item => {
+                    item.classList.remove('active');
+                });
+                document.querySelectorAll('.faq-arrow').forEach(arr => {
+                    arr.classList.remove('active');
+                });
+                
+                // Toggle current item
+                if (!isActive) {
+                    content.classList.add('active');
+                    arrow.classList.add('active');
+                }
+            });
+        });
+
+        // Category Filter Functionality
+        document.querySelectorAll('.category-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const category = this.dataset.category;
+                
+                // Update active button
+                document.querySelectorAll('.category-btn').forEach(b => {
+                    b.classList.remove('active', 'bg-gold', 'text-navy');
+                    b.classList.add('bg-gray-700', 'text-white');
+                });
+                this.classList.add('active', 'bg-gold', 'text-navy');
+                this.classList.remove('bg-gray-700', 'text-white');
+                
+                // Filter FAQ items
+                document.querySelectorAll('.faq-item').forEach(item => {
+                    if (category === 'all' || item.dataset.category === category) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+                
+                // Close all open FAQ items
+                document.querySelectorAll('.faq-content').forEach(content => {
+                    content.classList.remove('active');
+                });
+                document.querySelectorAll('.faq-arrow').forEach(arrow => {
+                    arrow.classList.remove('active');
+                });
+            });
+        });
+
+        // Search Functionality
+        document.getElementById('searchInput').addEventListener('input', function() {
+            const searchTerm = this.value.toLowerCase();
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('h3').textContent.toLowerCase();
+                const answer = item.querySelector('.faq-content p').textContent.toLowerCase();
+                
+                if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+            
+            // Reset category filter when searching
+            if (searchTerm) {
+                document.querySelectorAll('.category-btn').forEach(btn => {
+                    btn.classList.remove('active', 'bg-gold', 'text-navy');
+                    btn.classList.add('bg-gray-700', 'text-white');
+                });
+            }
+        });
+
+        // Support Button Handlers
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', function() {
+                if (this.textContent.includes('Canlı Destek')) {
+                    alert('Canlı destek hattımıza bağlanıyorsunuz... Lütfen bekleyin.');
+                } else if (this.textContent.includes('E-posta Gönder')) {
+                    alert('E-posta formuna yönlendiriliyorsunuz...');
+                }
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9685ed6825cbb0d2',t:'MTc1NDA1NzUxNC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

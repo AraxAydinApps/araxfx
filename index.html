@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AraxFX - Sermaye Bizden, Kazanç Sizden!</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'navy': '#1e3a8a',
+                        'dark-navy': '#1e2a5a',
+                        'gold': '#fbbf24',
+                        'dark-gold': '#f59e0b'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e2a5a 0%, #1e3a8a 50%, #374151 100%);
+        }
+        .gold-gradient {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+        }
+        .chart-line {
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+            animation: draw 3s ease-in-out forwards;
+        }
+        @keyframes draw {
+            to {
+                stroke-dashoffset: 0;
+            }
+        }
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white">
+    <!-- Header -->
+    <header class="bg-navy py-4 px-6 shadow-xl border-b border-gold/20">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <div class="w-12 h-12 gold-gradient rounded-lg flex items-center justify-center shadow-lg">
+                    <span class="text-navy font-bold text-xl">A</span>
+                </div>
+                <div>
+                    <h1 class="text-3xl font-bold text-gold">AraxFX</h1>
+                    <p class="text-xs text-gray-300">Global Investment Company</p>
+                </div>
+            </div>
+            <nav class="hidden md:flex space-x-8">
+                <a href="#hakkimizda" class="text-white hover:text-gold transition-colors font-medium">Hakkımızda</a>
+                <a href="#neden-biz" class="text-white hover:text-gold transition-colors font-medium">Neden Biz?</a>
+                <a href="#surec" class="text-white hover:text-gold transition-colors font-medium">Süreç</a>
+                <a href="#iletisim" class="text-white hover:text-gold transition-colors font-medium">İletişim</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg py-24 px-6 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+            <div class="space-y-8">
+                <div class="space-y-4">
+                    <h2 class="text-5xl md:text-6xl font-bold leading-tight text-white">
+                        AraxFX: <span class="text-gold">Sermaye Gücümüz,</span><br>
+                        <span class="text-gold">Yatırımcı Vizyonumuzla</span><br>
+                        <span class="text-white">Büyüyoruz.</span>
+                    </h2>
+                </div>
+                <p class="text-xl text-gray-300 leading-relaxed max-w-2xl">
+                    Forex piyasalarında faaliyet gösteren global sermayeli bir yatırım şirketiyiz. Yetenekli bireyleri bünyemize katıyor, sermayemizi onlarla birlikte değerlendiriyoruz.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                   <a href="https://www.arax.com"> 
+                     <button class="gold-gradient text-navy px-10 py-4 rounded-lg font-bold text-lg hover:scale-105 transform transition-all shadow-xl">
+                        🏢 Trader’ımız ol!
+                    </button>
+                  </a>
+                  <a href="file:///C:/Users/jpool/OneDrive/Desktop/sss1.html">
+                      <button class="border-2 border-gold text-gold px-10 py-4 rounded-lg font-bold text-lg hover:bg-gold hover:text-navy transition-all">
+                        📊 SSS
+                     </button>
+                  </a>
+                </div>
+                <div class="flex items-center space-x-8 pt-6">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-gold">$50M+</div>
+                        <div class="text-sm text-gray-400">Yönetilen Sermaye</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-gold">1500+</div>
+                        <div class="text-sm text-gray-400">Aktif Trader</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-gold">24/7</div>
+                        <div class="text-sm text-gray-400">Global Piyasalar</div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative">
+                <div class="float-animation">
+                    <svg viewBox="0 0 500 400" class="w-full h-auto">
+                        <!-- Corporate Office Building -->
+                        <rect x="150" y="100" width="200" height="250" rx="8" fill="#1e3a8a" stroke="#fbbf24" stroke-width="2"/>
+                        
+                        <!-- Windows Grid -->
+                        <g fill="#374151">
+                            <rect x="170" y="120" width="25" height="20" rx="2"/>
+                            <rect x="205" y="120" width="25" height="20" rx="2"/>
+                            <rect x="240" y="120" width="25" height="20" rx="2"/>
+                            <rect x="275" y="120" width="25" height="20" rx="2"/>
+                            <rect x="310" y="120" width="25" height="20" rx="2"/>
+                            
+                            <rect x="170" y="160" width="25" height="20" rx="2"/>
+                            <rect x="205" y="160" width="25" height="20" rx="2"/>
+                            <rect x="240" y="160" width="25" height="20" rx="2"/>
+                            <rect x="275" y="160" width="25" height="20" rx="2"/>
+                            <rect x="310" y="160" width="25" height="20" rx="2"/>
+                            
+                            <rect x="170" y="200" width="25" height="20" rx="2"/>
+                            <rect x="205" y="200" width="25" height="20" rx="2"/>
+                            <rect x="240" y="200" width="25" height="20" rx="2"/>
+                            <rect x="275" y="200" width="25" height="20" rx="2"/>
+                            <rect x="310" y="200" width="25" height="20" rx="2"/>
+                        </g>
+                        
+                        <!-- Golden windows (active offices) -->
+                        <g fill="#fbbf24" opacity="0.8">
+                            <rect x="205" y="120" width="25" height="20" rx="2"/>
+                            <rect x="275" y="160" width="25" height="20" rx="2"/>
+                            <rect x="240" y="200" width="25" height="20" rx="2"/>
+                        </g>
+                        
+                        <!-- Company Logo on Building -->
+                        <rect x="220" y="250" width="60" height="40" rx="5" fill="#fbbf24"/>
+                        <text x="250" y="275" text-anchor="middle" fill="#1e3a8a" font-size="24" font-weight="bold">A</text>
+                        
+                        <!-- Trading Screens Inside -->
+                        <rect x="180" y="300" width="140" height="30" rx="3" fill="#111827"/>
+                        <polyline points="185,315 200,310 220,305 240,300 260,295 280,290 300,285 315,280" 
+                                  fill="none" stroke="#fbbf24" stroke-width="2" class="chart-line"/>
+                        
+                        <!-- Global Network Lines -->
+                        <g stroke="#fbbf24" stroke-width="2" opacity="0.6">
+                            <line x1="100" y1="50" x2="250" y2="100" stroke-dasharray="5,5"/>
+                            <line x1="400" y1="80" x2="250" y2="120" stroke-dasharray="5,5"/>
+                            <line x1="50" y1="200" x2="150" y2="180" stroke-dasharray="5,5"/>
+                            <line x1="450" y1="250" x2="350" y2="220" stroke-dasharray="5,5"/>
+                        </g>
+                        
+                        <!-- Global Connection Points -->
+                        <circle cx="100" cy="50" r="8" fill="#fbbf24"/>
+                        <circle cx="400" cy="80" r="8" fill="#fbbf24"/>
+                        <circle cx="50" cy="200" r="8" fill="#fbbf24"/>
+                        <circle cx="450" cy="250" r="8" fill="#fbbf24"/>
+                        
+                        <!-- Professional Figures -->
+                        <g fill="#6b7280">
+                            <circle cx="120" cy="320" r="15"/>
+                            <rect x="110" y="330" width="20" height="25" rx="3"/>
+                            
+                            <circle cx="380" cy="300" r="15"/>
+                            <rect x="370" y="310" width="20" height="25" rx="3"/>
+                        </g>
+                        
+                        <!-- Success Indicators -->
+                        <text x="80" y="40" fill="#10b981" font-size="14" font-weight="bold">+$2.5M</text>
+                        <text x="420" y="70" fill="#10b981" font-size="14" font-weight="bold">+$1.8M</text>
+                        <text x="30" y="190" fill="#10b981" font-size="14" font-weight="bold">+$3.2M</text>
+                        
+                        <!-- Floating Financial Icons -->
+                        <text x="70" y="100" fill="#fbbf24" font-size="20" class="float-animation">💼</text>
+                        <text x="420" y="150" fill="#fbbf24" font-size="18" class="float-animation" style="animation-delay: 1s;">📊</text>
+                        <text x="80" y="280" fill="#10b981" font-size="16" class="float-animation" style="animation-delay: 2s;">🌍</text>
+                        <text x="400" y="320" fill="#fbbf24" font-size="20" class="float-animation" style="animation-delay: 3s;">💰</text>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="hakkimizda" class="py-20 px-6 bg-gray-800">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-bold mb-6">
+                    <span class="text-gold">AraxFX</span> Hakkında
+                </h3>
+                <p class="text-xl text-gray-300 max-w-4xl mx-auto">
+                    2018'den beri Forex piyasalarında faaliyet gösteren, güçlü finansal altyapısı ve profesyonel ekibiyle 
+                    global yatırım çözümleri sunan kurumsal bir şirketiz.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-16 items-center mb-16">
+                <div class="space-y-6">
+                    <h4 class="text-3xl font-bold text-gold">Kurumsal Yapımız</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 gold-gradient rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <span class="text-navy font-bold text-sm">✓</span>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-white mb-2">Lisanslı ve Düzenlenmiş</h5>
+                                <p class="text-gray-300">Uluslararası finansal düzenleyici kurumlar tarafından lisanslanmış ve denetlenen güvenilir yapı.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 gold-gradient rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <span class="text-navy font-bold text-sm">✓</span>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-white mb-2">Güçlü Sermaye Yapısı</h5>
+                                <p class="text-gray-300">50 milyon dolar üzerinde yönetilen sermaye ile sağlam finansal temel.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-8 h-8 gold-gradient rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <span class="text-navy font-bold text-sm">✓</span>
+                            </div>
+                            <div>
+                                <h5 class="font-bold text-white mb-2">Teknoloji Altyapısı</h5>
+                                <p class="text-gray-300">En gelişmiş trading platformları ve risk yönetim sistemleri ile donatılmış altyapı.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gradient-to-br from-navy to-dark-navy p-8 rounded-2xl border border-gold/20">
+                    <h4 class="text-2xl font-bold text-gold mb-6 text-center">Finansal Güç</h4>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-gold mb-2">$50M+</div>
+                            <div class="text-sm text-gray-300">Yönetilen Sermaye</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-gold mb-2">6</div>
+                            <div class="text-sm text-gray-300">Yıllık Deneyim</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-gold mb-2">1500+</div>
+                            <div class="text-sm text-gray-300">Aktif Trader</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-gold mb-2">24/7</div>
+                            <div class="text-sm text-gray-300">Destek Hizmeti</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section id="neden-biz" class="py-20 px-6 gradient-bg">
+        <div class="max-w-7xl mx-auto">
+            <h3 class="text-4xl font-bold text-center mb-16">
+                Neden <span class="text-gold">AraxFX</span>?
+            </h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-800/50 p-8 rounded-xl border border-gold/20 hover:border-gold/50 transition-all hover:scale-105">
+                    <div class="w-16 h-16 gold-gradient rounded-full flex items-center justify-center mb-6">
+                        <span class="text-3xl">🤝</span>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4 text-gold">%50 Kâr Ortaklığı</h4>
+                    <p class="text-gray-300 leading-relaxed">
+                        Başarılı yatırımlarınızdan elde edilen kârın %50'si sizin. Şeffaf hesaplaşma ve hızlı ödemeler.
+                    </p>
+                </div>
+                <div class="bg-gray-800/50 p-8 rounded-xl border border-gold/20 hover:border-gold/50 transition-all hover:scale-105">
+                    <div class="w-16 h-16 gold-gradient rounded-full flex items-center justify-center mb-6">
+                        <span class="text-3xl">🛡️</span>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4 text-gold">Risksiz Test Hesabı</h4>
+                    <p class="text-gray-300 leading-relaxed">
+                        Kendi paranızı riske atmadan yeteneklerinizi test edin. Tüm sermaye bizden, risk sıfır.
+                    </p>
+                </div>
+                <div class="bg-gray-800/50 p-8 rounded-xl border border-gold/20 hover:border-gold/50 transition-all hover:scale-105">
+                    <div class="w-16 h-16 gold-gradient rounded-full flex items-center justify-center mb-6">
+                        <span class="text-3xl">🎯</span>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4 text-gold">Tam Destek</h4>
+                    <p class="text-gray-300 leading-relaxed">
+                        Profesyonel mentorluk, eğitim programları ve 7/24 teknik destek ile yanınızdayız.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories -->
+    <section class="py-20 px-6 bg-gray-800">
+        <div class="max-w-7xl mx-auto">
+            <h3 class="text-4xl font-bold text-center mb-16">
+                Başarılı <span class="text-gold">Traderlarımız</span>
+            </h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gradient-to-br from-navy to-dark-navy p-8 rounded-xl border border-gold/20 hover:border-gold/50 transition-all">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mr-4">
+                            <span class="text-navy font-bold text-xl">MK</span>
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-xl text-white">Mehmet K.</h5>
+                            <p class="text-sm text-gray-400">Yazılım Mühendisi • İstanbul</p>
+                            <p class="text-xs text-gold font-semibold">AraxFX Trader - 2 Yıl</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-6 leading-relaxed">"AraxFX'e katıldığımda sadece temel analiz bilgim vardı. Şirketin profesyonel desteği ve güçlü sermayesi sayesinde istikrarlı kazanç elde ediyorum."</p>
+                    <div class="bg-gray-800/50 p-4 rounded-lg">
+                        <div class="text-gold font-bold text-lg">💰 Aylık Ortalama: $8,500</div>
+                        <div class="text-sm text-gray-400 mt-1">Son 12 ay performansı</div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-navy to-dark-navy p-8 rounded-xl border border-gold/20 hover:border-gold/50 transition-all">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mr-4">
+                            <span class="text-navy font-bold text-xl">AY</span>
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-xl text-white">Ayşe Y.</h5>
+                            <p class="text-sm text-gray-400">Finansal Danışman • Ankara</p>
+                            <p class="text-xs text-gold font-semibold">AraxFX Trader - 3 Yıl</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-6 leading-relaxed">"Forex piyasalarında deneyimim vardı ama sermaye sınırım büyük kazançları engelliyordu. AraxFX ile potansiyelimi gerçekleştirdim."</p>
+                    <div class="bg-gray-800/50 p-4 rounded-lg">
+                        <div class="text-gold font-bold text-lg">💰 Aylık Ortalama: $12,200</div>
+                        <div class="text-sm text-gray-400 mt-1">Son 12 ay performansı</div>
+                    </div>
+                </div>
+                <div class="bg-gradient-to-br from-navy to-dark-navy p-8 rounded-xl border border-gold/20 hover:border-gold/50 transition-all">
+                    <div class="flex items-center mb-6">
+                        <div class="w-16 h-16 bg-gold rounded-full flex items-center justify-center mr-4">
+                            <span class="text-navy font-bold text-xl">EÖ</span>
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-xl text-white">Emre Ö.</h5>
+                            <p class="text-sm text-gray-400">Ekonomist • İzmir</p>
+                            <p class="text-xs text-gold font-semibold">AraxFX Trader - 1.5 Yıl</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-6 leading-relaxed">"Makroekonomik analiz konusundaki bilgim AraxFX'in teknolojik altyapısıyla birleşince mükemmel sonuçlar elde ettik."</p>
+                    <div class="bg-gray-800/50 p-4 rounded-lg">
+                        <div class="text-gold font-bold text-lg">💰 Aylık Ortalama: $15,800</div>
+                        <div class="text-sm text-gray-400 mt-1">Son 12 ay performansı</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="surec" class="py-20 px-6 gradient-bg">
+        <div class="max-w-7xl mx-auto">
+            <h3 class="text-4xl font-bold text-center mb-16">
+                Katılım <span class="text-gold">Süreci</span>
+            </h3>
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="bg-gray-800/50 p-8 rounded-xl border border-gold/20 text-center hover:border-gold/50 transition-all">
+                    <div class="w-20 h-20 gold-gradient rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-navy font-bold text-3xl">1</span>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4 text-gold">Başvuru</h4>
+                    <p class="text-gray-300 leading-relaxed">Online başvuru formunu doldurun. Finansal geçmişiniz ve yatırım deneyiminiz hakkında bilgi verin.</p>
+                </div>
+                <div class="bg-gray-800/50 p-8 rounded-xl border border-gold/20 text-center hover:border-gold/50 transition-all">
+                    <div class="w-20 h-20 gold-gradient rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-navy font-bold text-3xl">2</span>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4 text-gold">Test</h4>
+                    <p class="text-gray-300 leading-relaxed">Piyasa analizi ve risk yönetimi becerilerinizi değerlendiren kapsamlı test sürecine katılın.</p>
+                </div>
+                <div class="bg-gray-800/50 p-8 rounded-xl border border-gold/20 text-center hover:border-gold/50 transition-all">
+                    <div class="w-20 h-20 gold-gradient rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-navy font-bold text-3xl">3</span>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4 text-gold">Değerlendirme</h4>
+                    <p class="text-gray-300 leading-relaxed">Uzman ekibimiz performansınızı değerlendirir ve size uygun sermaye miktarını belirler.</p>
+                </div>
+                <div class="bg-gray-800/50 p-8 rounded-xl border border-gold/20 text-center hover:border-gold/50 transition-all">
+                    <div class="w-20 h-20 gold-gradient rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-navy font-bold text-3xl">4</span>
+                    </div>
+                    <h4 class="text-2xl font-bold mb-4 text-gold">Sermaye Verme</h4>
+                    <p class="text-gray-300 leading-relaxed">Başarılı adaylar AraxFX Trader olur ve sermaye ile trading yapmaya başlar.</p>
+                </div>
+            </div>
+            
+            <div class="mt-16 bg-gray-800/30 p-8 rounded-2xl border border-gold/20">
+                <h4 class="text-2xl font-bold text-center text-gold mb-6">Süreç Detayları</h4>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h5 class="font-bold text-white mb-3">📋 Başvuru Gereksinimleri</h5>
+                        <ul class="text-gray-300 space-y-2">
+                            <li>• 18 yaş üstü olmak</li>
+                            <li>• Temel finansal okuryazarlık</li>
+                            <li>• Risk yönetimi anlayışı</li>
+                            <li>• Disiplinli çalışma yaklaşımı</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5 class="font-bold text-white mb-3">⏱️ Süreç Zamanlaması</h5>
+                        <ul class="text-gray-300 space-y-2">
+                            <li>• Başvuru: 5 dakika</li>
+                            <li>• Test süreci: 30 gün</li>
+                            <li>• Değerlendirme: 1 hafta</li>
+                            <li>• Sermaye tahsisi: 1-2 gün</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 px-6 bg-gray-800">
+        <div class="max-w-5xl mx-auto text-center">
+            <h3 class="text-5xl md:text-6xl font-bold mb-8">
+                AraxFX Ekibine <span class="text-gold">Katılın!</span>
+            </h3>
+            <p class="text-xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
+                Güçlü sermaye yapımız ve profesyonel desteğimizle yatırım potansiyelinizi gerçekleştirin. 
+                Başarılı yatırımcılar için kapılarımız açık.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-6 justify-center mb-12">
+                <button class="gold-gradient text-navy px-12 py-5 rounded-lg font-bold text-xl hover:scale-105 transform transition-all shadow-xl">
+                    🏢 Trader’ımız ol!
+                </button>
+                    
+                  <a href="file:///C:/Users/jpool/OneDrive/Desktop/sss1.html">
+                      <button class="border-2 border-gold text-gold px-10 py-4 rounded-lg font-bold text-lg hover:bg-gold hover:text-navy transition-all">
+                        📊 SSS
+                     </button>
+                  </a>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <div class="bg-gradient-to-br from-navy to-dark-navy p-6 rounded-xl border border-gold/20">
+                    <div class="text-3xl font-bold text-gold mb-2">24 Saat</div>
+                    <div class="text-gray-300">İçinde Geri Dönüş</div>
+                </div>
+                <div class="bg-gradient-to-br from-navy to-dark-navy p-6 rounded-xl border border-gold/20">
+                    <div class="text-3xl font-bold text-gold mb-2">%0</div>
+                    <div class="text-gray-300">Başvuru Ücreti</div>
+                </div>
+                <div class="bg-gradient-to-br from-navy to-dark-navy p-6 rounded-xl border border-gold/20">
+                    <div class="text-3xl font-bold text-gold mb-2">%50</div>
+                    <div class="text-gray-300">Kâr Payınız</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="iletisim" class="bg-gray-900 py-16 px-6 border-t border-gold/20">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div class="w-12 h-12 gold-gradient rounded-lg flex items-center justify-center">
+                            <span class="text-navy font-bold text-xl">A</span>
+                        </div>
+                        <div>
+                            <h1 class="text-2xl font-bold text-gold">AraxFX</h1>
+                            <p class="text-xs text-gray-400">Global Investment Company</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-4 leading-relaxed">
+                        Forex piyasalarında güçlü sermaye yapısı ile faaliyet gösteren profesyonel yatırım şirketi.
+                    </p>
+                    <div class="text-sm text-gray-500">
+                        <p>Lisans No: FX-2018-TR-001</p>
+                        <p>Düzenleyici: TCMB & SPK</p>
+                    </div>
+                </div>
+                
+                <div>
+                    <h5 class="font-bold text-gold mb-4">İletişim</h5>
+                    <div class="space-y-3 text-gray-400">
+                        <div class="flex items-center space-x-2">
+                            <span>📧</span>
+                            <span>info@araxfx.com</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span>📞</span>
+                            <span>+90 212 555 0123</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span>📍</span>
+                            <span>Maslak Mahallesi, Büyükdere Cad.<br>No:123 Sarıyer/İstanbul</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <span>🕒</span>
+                            <span>Pazartesi-Cuma: 09:00-18:00</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h5 class="font-bold text-gold mb-4">Kurumsal</h5>
+                    <div class="space-y-2">
+                        <a href="#" class="block text-gray-400 hover:text-gold transition-colors">Hakkımızda</a>
+                        <a href="#" class="block text-gray-400 hover:text-gold transition-colors">Yönetim Kurulu</a>
+                        <a href="#" class="block text-gray-400 hover:text-gold transition-colors">Finansal Raporlar</a>
+                        <a href="#" class="block text-gray-400 hover:text-gold transition-colors">Basın Odası</a>
+                        <a href="#" class="block text-gray-400 hover:text-gold transition-colors">Kariyer</a>
+                        <a href="#" class="block text-gray-400 hover:text-gold transition-colors">İletişim</a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h5 class="font-bold text-gold mb-4">Sosyal Medya</h5>
+                    <div class="flex space-x-4 mb-6">
+                        <a href="#" class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gold hover:text-navy transition-all">
+                            
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gold hover:text-navy transition-all">
+                            
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gold hover:text-navy transition-all">
+                            
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gold hover:text-navy transition-all">
+                            
+                        </a>
+                    </div>
+                    <div class="text-sm text-gray-400">
+                        <p class="mb-2">📈 Piyasa Analizi</p>
+                        <p class="mb-2">📊 Günlük Raporlar</p>
+                        <p>🎯 Eğitim İçerikleri</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center mb-6">
+                    <p class="text-gray-400 text-sm">
+                        © 2024 AraxFX Global Investment Company. Tüm hakları saklıdır.
+                    </p>
+                    <div class="flex flex-wrap gap-6 mt-4 md:mt-0">
+                        <a href="#" class="text-gray-400 hover:text-gold text-sm transition-colors">Gizlilik Politikası</a>
+                        <a href="#" class="text-gray-400 hover:text-gold text-sm transition-colors">Kullanım Şartları</a>
+                        <a href="#" class="text-gray-400 hover:text-gold text-sm transition-colors">Risk Uyarısı</a>
+                        <a href="#" class="text-gray-400 hover:text-gold text-sm transition-colors">Yasal Bilgiler</a>
+                        <a href="#" class="text-gray-400 hover:text-gold text-sm transition-colors">Çerez Politikası</a>
+                    </div>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-gray-800 p-4 rounded-lg">
+                        <h6 class="font-bold text-gold text-sm mb-2">Risk Uyarısı</h6>
+                        <p class="text-xs text-gray-400 leading-relaxed">
+                            Forex ve CFD işlemleri yüksek risk içerir ve tüm yatırımcılar için uygun olmayabilir. 
+                            Geçmiş performans gelecekteki sonuçları garanti etmez. Yatırım yapmadan önce risk seviyenizi değerlendirin.
+                        </p>
+                    </div>
+                    <div class="bg-gray-800 p-4 rounded-lg">
+                        <h6 class="font-bold text-gold text-sm mb-2">Düzenleyici Bilgiler</h6>
+                        <p class="text-xs text-gray-400 leading-relaxed">
+                            AraxFX, Türkiye Cumhuriyet Merkez Bankası (TCMB) ve Sermaye Piyasası Kurulu (SPK) 
+                            düzenlemeleri çerçevesinde faaliyet göstermektedir. Lisans No: FX-2018-TR-001
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Button click handlers
+        document.querySelectorAll('button').forEach(button => {
+            button.addEventListener('click', function() {
+                if (this.textContent.includes('Ekibimize Katıl')) {
+                    // Simulate team application
+                    this.innerHTML = '✅ Başvuru Alındı!';
+                    this.style.background = '#10b981';
+                    setTimeout(() => {
+                        alert('AraxFX ekibine katılım başvurunuz alınmıştır! 24 saat içinde uzman ekibimiz sizinle iletişime geçecek.');
+                    }, 500);
+                } else if (this.textContent.includes('Teste Katıl ve Yatırımcı Ol')) {
+                    // Simulate investor test application
+                    this.innerHTML = '📊 Test Başlatılıyor...';
+                    this.style.background = '#1e3a8a';
+                    setTimeout(() => {
+                        alert('Yatırımcı değerlendirme testine yönlendiriliyorsunuz. Lütfen e-postanızı kontrol edin.');
+                    }, 500);
+                } else if (this.textContent.includes('Demo Hesap')) {
+                    alert('Demo hesap açılıyor... Size özel bir link gönderilecek.');
+                }
+            });
+        });
+
+        // Add some interactive hover effects
+        document.querySelectorAll('.hover\\:scale-105').forEach(element => {
+            element.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.05)';
+            });
+            element.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'967b7a6b653c0c48',t:'MTc1Mzk0Nzk0Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
